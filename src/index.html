@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dapp To Do List</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-primary">
+                <h4 class="text-white">DApp To-Do List</h4>
+                <span id="account"></span>
+            </nav>
+        </div>
+    
+        <div id="loader" class="container-fluid d-flex justify-content-center mt-2">
+            <h4>Loading...</h4>
+        </div>
+    
+        <div id="content" class="container d-flex flex-column justify-content-center mt-2">
+            <form onsubmit="App.createTask(); return false;">
+                <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
+                <input type="submit" hidden>
+            </form>
+            <ul id="taskList" class="list-unstyled my-3">
+                <div class="taskTemplate checkbox" style="display: none">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="taskContent">Task content goes here...</span>
+                    </label>
+                </div>
+            </ul>
+            <ul id="completedTaskList" class="list-unstyled">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

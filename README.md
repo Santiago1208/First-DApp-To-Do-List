@@ -32,7 +32,7 @@ Make sure, your device had installed:
 6. If you are using Windows, you need to provide script's execution permissions to run `truffle` commands. In a Powershell console, with administrator permissions, run this command:
 
    ```powershell
-   Set-ExecutionPolicy --ExecutionPolicy Unrestricted --scope currentUser
+   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -scope currentUser
    ```
 
    For more information read this post: https://docs.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.

@@ -29,13 +29,21 @@ Make sure, your device had installed:
    npm install
    ```
 
-5. Perform the migrations of the smart contracts to the *blockchain* via
+6. If you are using Windows, you need to provide script's execution permissions to run `truffle` commands. In a Powershell console, with administrator permissions, run this command:
+
+   ```powershell
+   Set-ExecutionPolicy --ExecutionPolicy Unrestricted --scope currentUser
+   ```
+
+   For more information read this post: https://docs.microsoft.com/es-es/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.
+
+7. Perform the migrations of the smart contracts to the *blockchain* via
 
    ```bash
    truffle migrate
    ```
 
-6. Make sure all the features are running without problems with
+8. Make sure all the features are running without problems with
 
    ```bash
    truffle test
@@ -43,7 +51,7 @@ Make sure, your device had installed:
 
    If Ganache is not running at *127.0.0.1:7545*, the command above won't work.
 
-7. Run the virtual server via
+9. Run the virtual server via
 
    ```bash
    npm run dev
@@ -51,5 +59,5 @@ Make sure, your device had installed:
 
    This command will open your default browser in the URL *127.0.0.1: 3000*. Make sure that browser is which Metamask was installed.
 
-8. Interact with the application. Explore how much Ethers each transaction cost.
+10. Interact with the application. Explore how much Ethers each transaction cost.
 
